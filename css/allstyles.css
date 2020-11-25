@@ -1,3 +1,6 @@
+:root {
+    --primary-color: #cd1997;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,18 +11,25 @@
 img {
     width: 100%;
 }
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 30px;
+}
 .navbar {
     width: 100%;
-    background-color: #cd1997;
+    background-color: var(--primary-color);
     height: 80px;
     display: flex;
-    justify-content: center;
+    /* justify-content: space-between; */
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 999;
+    overflow: hidden;
 }
-
+a{ text-decoration: none;}
 .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -52,9 +62,10 @@ img {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 10px;
+    margin: 0 20px;
     height: 100%;
 }
 
@@ -78,7 +89,7 @@ img {
     outline: none;
     border-radius: 4px;
     background-color: white;
-    color: #cd1997;
+    color: var(--primary-color);
 }
 
 .button:hover {
@@ -88,7 +99,7 @@ img {
 }
 
 .navbar_links:hover {
-    border-bottom: 3px solid white;
+    border-bottom: 5px solid white;
 }
 
 @media screen and (max-width: 960px) {
@@ -113,7 +124,7 @@ img {
         transition: all 0.8s ease;
         height: 50vh;
         z-index: -1;
-        background: #cd1997
+        background:var(--primary-color);
     }
 
     .navbar_menu.active {
@@ -207,7 +218,7 @@ h1{
 .grid {
     display: grid;
     width: 114em;
-    grid-gap: 6rem;
+    gap: 6rem;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     display: flex;
     justify-content: center;
@@ -279,9 +290,21 @@ h1{
         padding: 0;
     }
 }
-
+/* 
 #who-we-are{
     padding-right: 9rem;
     padding-left: 9rem;
-
-}
+    margin: 90px 0;
+} */
+.grids{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 300px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin: 90px 0;
+/* }
+.donation{
+    height: 150px;
+} */
